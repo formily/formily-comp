@@ -3,6 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/formily-comp.umd.cjs",
+  "module": "./dist/formily-comp.js",
+  "exports": {
+    ".": {
+      "import": "./dist/formily-comp.js",
+      "require": "./dist/formily-comp.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
