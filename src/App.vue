@@ -2,6 +2,13 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import MyButton from './packages/my-button/index'
+
+import { FormilyView } from './index'
+
+const configId: string = 'FQ57Ie49fPchCOXm' // 低代码配置 ID
+const confirm = (formData) => {
+  console.log('confirm', formData, formData.name) // 获取表单数据
+}
 </script>
 
 <template>
@@ -14,6 +21,7 @@ import MyButton from './packages/my-button/index'
 
   <main>
     <MyButton></MyButton>
+    <FormilyView :configId="configId" @confirm="confirm" />
     <TheWelcome />
   </main>
 </template>
